@@ -26,14 +26,21 @@ public class ViewCanvas extends View {
     }
 
     // Inicializar os objetos
-    private void inicializaObjetos(){
+    public void inicializaObjetos(){
         path = new Path();
         linha = new Linha(getContext(), path);
     }
 
     public void inicializaObjetosVerde(){
-        path = new Path();
+        //path = new Path();
         Paint paint = Estilo.getEstiloParaLinhaVerde();
+        paint.clearShadowLayer();
+        linha = new Linha(getContext(), path, paint);
+    }
+
+    public void inicializaObjetosMeu(){
+        path = new Path();
+        Paint paint = Estilo.getMeuEstilo();
         linha = new Linha(getContext(), path, paint);
     }
 
@@ -50,7 +57,7 @@ public class ViewCanvas extends View {
         float distanciaY = Math.abs(y - eixoY);
 
         if(distanciaX >= TOLERANCIA_MOVIMENTO || distanciaY >= TOLERANCIA_MOVIMENTO){
-            path.quadTo(eixoX, eixoY, (x + eixoX)/2, (y + eixoY)/2);
+            path.quadTo(eixoX, eixoY, (x + eixoX)/2, (y + eixoY)/2); // Mudei
             eixoX = x;
             eixoY = y;
         }

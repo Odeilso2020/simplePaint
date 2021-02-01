@@ -5,13 +5,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="10">
 
     <br.com.progiv.simplepaint.ViewCanvas
-        android:layout_width="match_parent"
-        android:layout_height="460dp"
         android:id="@+id/area_desenho"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
 
     <Button
         android:layout_width="match_parent"
@@ -25,6 +26,13 @@
         android:layout_height="wrap_content"
         android:onClick="corVerde"
         android:text="@string/corVerde"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="meuEstilo"
+        android:text="@string/meuEstilo"
         />
 
 </LinearLayout>

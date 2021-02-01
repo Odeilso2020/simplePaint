@@ -24,4 +24,14 @@ public class Estilo {
         estiloLinhaVerde.setStrokeJoin(Paint.Join.ROUND);
         return estiloLinhaVerde;
     }
+
+    public static Paint getMeuEstilo(){
+        Paint estiloMeu = new Paint();
+        estiloMeu.setAntiAlias(true);
+        estiloMeu.setColor(Color.RED);
+        estiloMeu.setStyle(Paint.Style.STROKE);
+        estiloMeu.setStrokeWidth(10f);
+        estiloMeu.setStrokeJoin(Paint.Join.ROUND);
+        return estiloMeu;
+    }
 }
